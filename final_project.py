@@ -5,34 +5,38 @@ from datetime import date, datetime
 from dateutil.relativedelta import relativedelta
 
 # Print the current working directory for reference
-print('\nCurrent working directory:')
-print(os.getcwd())  # This will print the current working directory
+# print('\nCurrent working directory:')
+# print(os.getcwd())  # This will print the current working directory
 
 # Define the path to the data folder (assuming the script is in the same folder as the data)
-path = os.getcwd()
-data_folder_path = path
+# path = os.getcwd()
+# data_folder_path = path
 
 # File names of the datasets
-file_to_open_electricity = 'Electricity_20-09-2024.csv'
-file_to_open_price = 'sahkon-hinta-010121-240924.csv'
+# file_to_open_electricity = 'Electricity_20-09-2024.csv'
+# file_to_open_price = 'sahkon-hinta-010121-240924.csv'
 
 # Construct the full paths to the CSV files
-file_path_electricity = os.path.join(data_folder_path, file_to_open_electricity)
-file_path_price = os.path.join(data_folder_path, file_to_open_price)
+# file_path_electricity = os.path.join(data_folder_path, file_to_open_electricity)
+# file_path_price = os.path.join(data_folder_path, file_to_open_price)
+
+# GIT: Construct the full paths to the CSV files
+url_electricity = "https://github.com/dd1975-sudo/electricity_data/blob/main/Electricity_20-09-2024.csv"
+url_price = "https://github.com/dd1975-sudo/electricity_data/blob/main/sahkon-hinta-010121-240924.csv"
 
 # Print the paths for verification
-print(f'\nElectricity file path: {file_path_electricity}')
-print(f'Price file path: {file_path_price}')
+# print(f'\nElectricity file path: {file_path_electricity}')
+# print(f'Price file path: {file_path_price}')
 
 # Now you can load the data using pandas
 try:
-    df_el = pd.read_csv(file_path_electricity, delimiter=';', na_values=[''], usecols=['Energy (kWh)', 'Temperature'])
+    df_el = pd.read_csv(url_electricity, delimiter=';', na_values=[''], usecols=['Energy (kWh)', 'Temperature'])
     print('Electricity data loaded successfully.')
 except FileNotFoundError:
     print(f"Error: The file {file_to_open_electricity} was not found in {data_folder_path}.")
 
 try:
-    df_price = pd.read_csv(file_path_price, delimiter=';', na_values=[''])
+    df_price = pd.read_csv(url_price, delimiter=';', na_values=[''])
     print('Price data loaded successfully.')
 except FileNotFoundError:
     print(f"Error: The file {file_to_open_price} was not found in {data_folder_path}.")
@@ -41,8 +45,8 @@ except FileNotFoundError:
 # - Specify the columns you want to load by name from electricity
 columns_to_load = ['Time', 'Energy (kWh)', 'Temperature']
 
-df_el = pd.read_csv(file_path_electricity, delimiter= ';', na_values= [''], usecols= columns_to_load)
-df_pr = pd.read_csv(file_path_price, na_values= [''])
+df_el = pd.read_csv(url_electricity, delimiter= ';', na_values= [''], usecols= columns_to_load)
+df_pr = pd.read_csv(url_price, na_values= [''])
 
 
 # --- start: strings to floats in electricity
