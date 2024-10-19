@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Data file Electricity_20-09-2024.csv contains information about
 # hourly electricity consumption (column Energy (kWh)) and Temperature.
 # Another file sahkon-hinta-010121-240924.csv contains information about
@@ -396,7 +395,7 @@ if start_date is not None and end_date is not None and grouping_freq != "":
     # with col3:
     #     comsumption = df_filtered_timerange['Energy (kWh)'].sum().round(2)
     
-=======
+# =======
 # Data file Electricity_20-09-2024.csv contains information about
 # hourly electricity consumption (column Energy (kWh)) and Temperature.
 # Another file sahkon-hinta-010121-240924.csv contains information about
@@ -793,5 +792,4 @@ if start_date is not None and end_date is not None and grouping_freq != "":
     # # Display the temperature data in the third column
     # with col3:
     #     comsumption = df_filtered_timerange['Energy (kWh)'].sum().round(2)
-    
->>>>>>> 41d598a5ad52ccf6734b1c69bb93312761773cea
+### joo
