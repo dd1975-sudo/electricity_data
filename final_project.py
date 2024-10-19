@@ -86,7 +86,6 @@ print(df_el.head())
 
 # END: fix errors with data
 
-
 # Step 2: Convert the columns to float
 df_el['Energy (kWh)'] = df_el['Energy (kWh)'].astype(float)
 df_el['Temperature'] = df_el['Temperature'].astype(float)
