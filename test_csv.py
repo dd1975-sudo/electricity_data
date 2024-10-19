@@ -5,7 +5,8 @@ import streamlit as st
 st.title("Electricity Data Inspection")
 
 # URL of the electricity data (replace this with the correct URL if needed)
-url_electricity = "https://raw.githubusercontent.com/dd1975-sudo/electricity_data/refs/heads/main/Electricity_20-09-2024.csv"
+url_electricity = "https://raw.githubusercontent.com/dd1975-sudo/electricity_data/main/Electricity_20-09-2024.csv"
+
 
 # Load the CSV without specifying usecols to inspect the columns
 st.write("Attempting to load the CSV file...")
