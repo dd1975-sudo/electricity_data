@@ -21,8 +21,8 @@ from dateutil.relativedelta import relativedelta
 # file_path_price = os.path.join(data_folder_path, file_to_open_price)
 
 # GIT: Construct the full paths to the CSV files
-url_electricity = "https://github.com/dd1975-sudo/electricity_data/blob/main/Electricity_20-09-2024.csv"
-url_price = "https://github.com/dd1975-sudo/electricity_data/blob/main/sahkon-hinta-010121-240924.csv"
+url_electricity = "https://raw.githubusercontent.com/dd1975-sudo/electricity_data/refs/heads/main/Electricity_20-09-2024.csv"
+url_price = "https://raw.githubusercontent.com/dd1975-sudo/electricity_data/refs/heads/main/sahkon-hinta-010121-240924.csv"
 
 # Print the paths for verification
 # print(f'\nElectricity file path: {file_path_electricity}')
