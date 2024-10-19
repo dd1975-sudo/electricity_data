@@ -3,7 +3,6 @@ import streamlit as st
 
 st.write("Hello! Streamlit is working.")
 
-
 # Streamlit title for the app
 st.title("Electricity Data Inspection")
 
